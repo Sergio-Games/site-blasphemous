@@ -50,7 +50,7 @@ section{
     display: flex;
     margin-top: 40px auto;
     align-items: center;
-    line-height: 10vh;
+    line-height: 5vw;
     text-align: center;
 }
 
@@ -71,19 +71,34 @@ img#principal{
     margin-left: 20px;
 }
 
-#pagina2{
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+img#mulher{
+    margin: 12em 2em;
+    width: 30em;
+    border-radius: 10px 50px;
+    box-shadow: 3px 5px 20px rgb(76 49 226 / 36%);;
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+section#pagina2{
+    display: block;
+    text-align: left;
+    height: 90vh;
     background-color: var(--cor4);
+    box-shadow: inset 2px 3px 4px rgba(0, 0, 0, 0.349);
 }
 
-.interface{
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
-.paginas{
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
